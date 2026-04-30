@@ -27,6 +27,10 @@ spec:
               value: "http://order-service:8083"
             - name: NOTIFICATION_SERVICE_URL
               value: "http://notification-service:8084"
+            - name: AI_SERVICE_URL
+              value: "http://ai-service:8085"
+            - name: AIOPS_SERVICE_URL
+              value: "http://aiops-service:8086"
           readinessProbe:
             httpGet:
               path: /actuator/health
