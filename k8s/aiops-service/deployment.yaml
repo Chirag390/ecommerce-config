@@ -62,6 +62,14 @@ spec:
               value: "http://notification-service:8084"
             - name: K8S_NAMESPACE
               value: "ecommerce"
+            - name: ARGOCD_URL
+              value: "https://argocd-server.argocd"
+            - name: ARGOCD_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: ai-secrets
+                  key: argocd-token
+                  optional: true
           resources:
             requests:
               cpu: 250m
